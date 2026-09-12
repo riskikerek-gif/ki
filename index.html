@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Halo Sayangkuu Ceyin 💗</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+
+            background: linear-gradient(
+                135deg,
+                #ffd1e3,
+                #fff0f7,
+                #ffc1d8
+            );
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 650px;
+
+            background: rgba(255,255,255,0.96);
+
+            border-radius: 30px;
+            padding: 40px 30px;
+
+            text-align: center;
+
+            box-shadow:
+                0 20px 50px
+                rgba(255,80,130,0.25);
+        }
+
+        h1 {
+            color: #ff4f81;
+            font-size: 36px;
+            line-height: 1.3;
+        }
+
+        h2 {
+            color: #ff6f91;
+        }
+
+        p {
+            color: #555;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .nama {
+            font-size: 55px;
+            font-weight: bold;
+            color: #ff4f81;
+
+            text-shadow:
+                3px 3px 0 #ffd1df;
+        }
+
+        .cake {
+            font-size: 80px;
+
+            animation:
+                naikTurun 2s infinite;
+        }
+
+        /* https://i.imgur.com/CYnZ8jn.jpeg */
+
+        .foto {
+            width: 220px;
+            height: 220px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 8px solid white;
+
+            box-shadow:
+                0 10px 30px
+                rgba(255,79,129,0.35);
+
+            margin: 20px auto;
+
+            display: block;
+
+            animation:
+                muncul 1.2s ease;
+        }
+
+        button {
+            border: none;
+
+            padding: 15px 32px;
+
+            border-radius: 50px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff4f81,
+                    #ff789b
+                );
+
+            color: white;
+
+            font-size: 17px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            margin-top: 20px;
+
+            box-shadow:
+                0 8px 20px
+                rgba(255,79,129,0.3);
+
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.08);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .heart {
+            font-size: 60px;
+            margin: 20px;
+
+            animation:
+                heartbeat 1s infinite;
+        }
+
+        .surat {
+            background: #fff5f8;
+
+            border-radius: 20px;
+
+            padding: 25px;
+
+            margin-top: 25px;
+
+            text-align: left;
+
+            border:
+                2px dashed #ff9fba;
+        }
+
+        .surat p {
+            font-size: 16px;
+        }
+
+        .penutup {
+            color: #ff4f81;
+            font-weight: bold;
+        }
+
+        .sayang {
+            font-size: 25px;
+            color: #ff4f81;
+            font-weight: bold;
+        }
+
+        .floating-heart {
+            position: fixed;
+
+            bottom: -50px;
+
+            font-size: 25px;
+
+            animation:
+                terbang 6s linear infinite;
+
+            pointer-events: none;
+        }
+
+        .heart1 {
+            left: 10%;
+        }
+
+        .heart2 {
+            left: 30%;
+            animation-delay: 2s;
+        }
+
+        .heart3 {
+            left: 50%;
+            animation-delay: 4s;
+        }
+
+        .heart4 {
+            left: 70%;
+            animation-delay: 1s;
+        }
+
+        .heart5 {
+            left: 90%;
+            animation-delay: 3s;
+        }
+
+        @keyframes heartbeat {
+
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.25);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes naikTurun {
+
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes terbang {
+
+            0% {
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                transform:
+                    translateY(-110vh)
+                    rotate(360deg);
+
+                opacity: 0;
+            }
+        }
+
+        @keyframes muncul {
+
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .nama {
+                font-size: 43px;
+            }
+
+            .foto {
+                width: 180px;
+                height: 180px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- HATI TERBANG -->
+
+    <div class="floating-heart heart1">❤️</div>
+    <div class="floating-heart heart2">💕</div>
+    <div class="floating-heart heart3">💗</div>
+    <div class="floating-heart heart4">💖</div>
+    <div class="floating-heart heart5">❤️</div>
+
+
+    <div class="container">
+
+
+        <!-- HALAMAN PEMBUKA -->
+
+        <div id="opening">
+
+            <div class="cake">
+                🎂
+            </div>
+
+            <h1>
+                Halo Sayangkuu 💗
+            </h1>
+
+            <div class="nama">
+                Ceyin ❤️
+            </div>
+
+            <p>
+                Ada hadiah kecil yang aku
+                siapkan khusus buat kamu... 🥺
+            </p>
+
+            <p>
+                Jangan senyum dulu...
+                nanti aku makin sayang 😆❤️
+            </p>
+
+            <button onclick="bukaHadiah()">
+                🎁 Buka Hadiah
+            </button>
+
+        </div>
+
+
+        <!-- HALAMAN HADIAH -->
+
+        <div id="hadiah" class="hidden">
+
+            <div class="heart">
+                💗
+            </div>
+
+            <h1>
+                Happy 19th Birthday,
+                Ceyin! 🎂
+            </h1>
+
+            <!-- FOTO CEYIN -->
+
+            <img
+                src="ceyin.jpg"
+                alt="Foto Ceyin"
+                class="foto"
+            >
+
+            <p>
+                Yeayyyy! 🥳
+            </p>
+
+            <p>
+                Sayangkuu sekarang sudah
+                19 tahun! 🎀❤️
+            </p>
+
+            <p>
+                Selamat ulang tahun yang ke-19
+                yaaa, Ceyin sayang. 🥺❤️
+            </p>
+
+            <p>
+                Semoga di umur 19 tahun ini
+                Ceyin selalu sehat, bahagia,
+                sukses, dan semua impian
+                Ceyin bisa tercapai. ✨
+            </p>
+
+            <p>
+                Semoga senyum Ceyin selalu
+                menghiasi hari-hari kamu. 🌷
+            </p>
+
+            <div class="heart">
+                ❤️
+            </div>
+
+            <h2>
+                Masih ada satu hadiah lagi...
+            </h2>
+
+            <button onclick="bukaSurat()">
+                💌 Buka Surat
+            </button>
+
+        </div>
+
+
+        <!-- SURAT -->
+
+        <div id="surat" class="hidden">
+
+            <div class="heart">
+                💌
+            </div>
+
+            <h1>
+                Untuk Sayangkuu Ceyin ❤️
+            </h1>
+
+            <div class="surat">
+
+                <p>
+                    Halo sayangkuu Ceyin... 🥺❤️
+                </p>
+
+                <p>
+                    Selamat ulang tahun yang ke-19
+                    yaa sayangkuu.
+                </p>
+
+                <p>
+                    Hari ini adalah hari spesial,
+                    karena seseorang yang sangat
+                    spesial sedang bertambah usia.
+                </p>
+
+                <p>
+                    Aku mungkin nggak bisa memberikan
+                    hadiah yang paling mahal atau
+                    paling sempurna.
+                </p>
+
+                <p>
+                    Tapi aku ingin memberikan sesuatu
+                    yang dibuat khusus untuk kamu. ❤️
+                </p>
+
+                <p>
+                    Aku bersyukur banget bisa
+                    mengenal Ceyin.
+                </p>
+
+                <p>
+                    Terima kasih sudah hadir dan
+                    menjadi bagian dari cerita hidupku.
+                </p>
+
+                <p>
+                    Senyum kamu, cerita kamu,
+                    tingkah lucu kamu, bahkan
+                    hal-hal kecil yang kamu lakukan
+                    bisa membuat hariku menjadi
+                    lebih indah. 🥰
+                </p>
+
+                <p>
+                    Di umur 19 tahun ini,
+                    aku berharap Ceyin selalu
+                    dikelilingi kebahagiaan.
+                </p>
+
+                <p>
+                    Jangan takut mengejar impian.
+                    Jangan takut gagal.
+                    Dan jangan pernah merasa
+                    kamu tidak cukup baik.
+                </p>
+
+                <p>
+                    Karena menurutku,
+                    Ceyin sudah sangat istimewa
+                    hanya dengan menjadi diri
+                    Ceyin sendiri. ❤️
+                </p>
+
+                <p>
+                    Kalau suatu hari kamu capek,
+                    istirahat yaa sayang.
+                </p>
+
+                <p>
+                    Kalau sedang sedih,
+                    jangan dipendam sendirian.
+                </p>
+
+                <p>
+                    Dan kalau dunia terasa berat,
+                    semoga kamu selalu ingat
+                    kalau kamu berharga.
+                </p>
+
+                <p>
+                    Aku cuma ingin melihat kamu
+                    bahagia, tersenyum, dan
+                    mendapatkan semua hal baik
+                    yang kamu pantas dapatkan. ❤️
+                </p>
+
+                <p>
+                    Jadi sekali lagi...
+                </p>
+
+                <p>
+                    <strong>
+                        Selamat ulang tahun,
+                        sayangkuu Ceyin. 🎂❤️
+                    </strong>
+                </p>
+
+            </div>
+
+
+            <div class="heart">
+                💗
+            </div>
+
+            <h1>
+                HAPPY BIRTHDAY,
+                CEYIN! 🎂🎉❤️
+            </h1>
+
+            <p>
+                Selamat datang di umur 19 tahun,
+                sayangkuu. 🎀
+            </p>
+
+            <p>
+                Semoga semua yang Ceyin impikan
+                perlahan menjadi kenyataan. ✨
+            </p>
+
+            <p>
+                Semoga Ceyin selalu sehat,
+                bahagia, sukses, dan
+                dikelilingi orang-orang yang
+                menyayangi Ceyin.
+            </p>
+
+            <div class="heart">
+                ❤️
+            </div>
+
+            <p class="sayang">
+                I Love You,
+                Sayangkuu Ceyin ❤️
+            </p>
+
+            <p>
+                Jangan lupa bahagia yaa,
+                sayangkuu. 🥺❤️
+            </p>
+
+            <p class="penutup">
+                Dari seseorang yang selalu ingin
+                melihat Ceyin tersenyum. ❤️
+            </p>
+
+            <div class="heart">
+                🥰💐🎀❤️
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function bukaHadiah() {
+
+            document.getElementById("opening")
+                .style.display = "none";
+
+            document.getElementById("hadiah")
+                .style.display = "block";
+
+        }
+
+
+        function bukaSurat() {
+
+            document.getElementById("hadiah")
+                .style.display = "none";
+
+            document.getElementById("surat")
+                .style.display = "block";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
